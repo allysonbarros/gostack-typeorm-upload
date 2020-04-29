@@ -9,13 +9,6 @@ interface Request {
   file: Buffer;
 }
 
-interface Request {
-  title: string;
-  value: number;
-  type: 'income' | 'outcome';
-  category: string;
-}
-
 class ImportTransactionsService {
   async execute({ file }: Request): Promise<Transaction[]> {
     const createdTransactions = [] as Transaction[];
